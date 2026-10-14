@@ -360,7 +360,8 @@ input::placeholder, textarea::placeholder { color: transparent !important; }
 .opt input, .chip input { display: none; }
 .opt span, .chip span { display: inline-flex !important; align-items: center; border: 0 !important; background: none !important; min-height: 0 !important; padding: 0 !important; color: #000 !important; font-weight: 400 !important; font-size: 13.5px; text-align: left; }
 .opt span::before, .chip span::before { content: ""; display: inline-block; width: 12px; height: 12px; border: 1.4px solid #000; margin-right: 6px; flex: none; box-sizing: border-box; }
-.opt input:checked + span::before, .chip input:checked + span::before { background: #000; box-shadow: inset 0 0 0 2px #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.opt span, .chip span { position: relative; }
+.opt input:checked + span::after, .chip input:checked + span::after { content: ""; position: absolute; left: 3px; top: 50%; width: 6px; height: 6px; margin-top: -3px; background: #000; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .chips { gap: 6px 16px; }
 .pad { height: 24mm; border: 1px solid #8a93a0; background: #fff; }
 .pad-line { display: block; border-top-color: #aab2bd; }
